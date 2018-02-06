@@ -1,0 +1,38 @@
+#tdow-subnav{
+	background-color: #CCC; 
+	color: white;
+	font-weight: bold;
+	font-size: 150%;
+}
+#tdow-subnav div{
+	margin: 35px 0 35px 0;
+}
+#date{
+}
+#location{
+	padding-left: 80px;
+}
+#jc-no{
+}
+.division{
+	border-right: 1px solid #555;
+}
+p{
+	text-align: center;
+}
+
+.billing table{
+	width: 70%;
+	padding: 15px;
+}
+.billing tr{
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	padding: 15px;
+	text-align: center;
+}
+.billing tr td,.billing tr th{
+	padding: 15px;
+	border-right: 1px solid #888;
+}

@@ -1,0 +1,52 @@
+/** RESET **/
+* {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+body {
+  padding:30px;
+  background:#DBDBDB;
+  font:normal normal 16px sans-serif;
+}
+ul {
+  list-style:inside;
+}
+p {
+  margin:0;
+}
+img.left {
+  float:left;
+  margin-right:1em;
+}
+img.right {
+  float:right;
+  margin-left:1em;
+}
+
+
+/** ACCORDIAN **/
+.accordian {
+  list-style:none;
+  margin:0 0 40px;
+  padding:0;
+  border:1px solid #ddd;
+  border-top:0;
+}
+.accordian header {
+  display:block;
+  margin:0;
+  padding:1em;
+  background:#eee;
+  border-top:1px solid #ddd;
+  cursor:pointer;
+}
+.accordian section {
+  display:none;
+  padding:1em;
+  background:#fff;
+  border-top:1px solid #ddd;
+}
+.accordian section.active {
+  display:block;
+}
