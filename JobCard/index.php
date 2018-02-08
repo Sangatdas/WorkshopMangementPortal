@@ -1,5 +1,42 @@
 <?php
  session_start(); 
+ if (!isset($_SESSION['customer-name'])) {
+ 	# code...
+ 	$_SESSION['customer-name'] = "";
+ }
+  if (!isset($_SESSION['customer-address'])) {
+ 	# code...
+ 	$_SESSION['customer-address'] = "";
+ }
+ if (!isset($_SESSION['customer-ph-1'])) {
+ 	# code...
+ 	$_SESSION['customer-ph-1'] = "";
+ }
+ if (!isset($_SESSION['customer-ph-2'])) {
+ 	# code...
+ 	$_SESSION['customer-ph-2'] = "";
+ }
+ if (!isset($_SESSION['customer-email'])) {
+ 	# code...
+ 	$_SESSION['customer-email'] = "";
+ }
+ if (!isset($_SESSION['reg-no'])) {
+ 	# code...
+ 	$_SESSION['reg-no'] = "";
+ }
+ if (!isset($_SESSION['chassis-no'])) {
+ 	# code...
+ 	$_SESSION['chassis-no'] = "";
+ }
+ if (!isset($_SESSION['model-no'])) {
+ 	# code...
+ 	$_SESSION['model-no'] = "";
+ }
+ if (!isset($_SESSION['vehicle'])) {
+ 	# code...
+ 	$_SESSION['vehicle'] = "";
+ }
+
 ?>
 <!DOCTYPE Html>
 <html>
@@ -183,7 +220,7 @@
 		<br><br>
 
 		<center>
-			<input type="submit" class="btn-dark" value="Save" style="width:200px;font-weight:bold;">
+			<input type="submit" class="btn-dark" id="print" value="Save" style="width:200px;font-weight:bold;cursor:pointer;">
 		</center>
 		
 		</form>
@@ -194,6 +231,13 @@
 		<br><hr><br>
 
 <!-- Javascript -->
+		<!-- CDNs -->
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		
+		<!-- End CDNs -->
 
 		<!-- Internal Javascript -->
 
@@ -216,6 +260,14 @@
 
 
 		</script>
+		<script type="text/javascript">
+
+			$("#print").click(function(event){
+
+				window.print();
+			})
+
+		</script>
 
 		<!-- End Internal Javascript -->
 
@@ -226,13 +278,6 @@
 
 		<!-- End Extrenal Javascript -->
 
-		<!-- CDNs -->
-
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		
-		<!-- End CDNs -->
 
 <!-- End Javascript -->
 
