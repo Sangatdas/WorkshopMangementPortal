@@ -74,23 +74,23 @@
 					  <div class="modal-dialog modal-dialog-centered" role="document">
 					    <div class="modal-content">
 					      <div class="modal-header">
-					        <h5 class="modal-title" id="exampleModalLongTitle">Polishing</h5>
+					        <h5 class="modal-title" id="exampleModalLongTitle">Exterior Polishing</h5>
 					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					          <span aria-hidden="true">&times;</span>
 					        </button>
 					      </div>
 					      <div class="modal-body">
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Exterior Polish" value="1200">&nbsp;&nbsp;Exterior Polish
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="ep-1" value="1200">&nbsp;&nbsp;Exterior Polish
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Headlight Polish" value="2500">&nbsp;&nbsp;Headlight Polish
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="ep-2" value="2500">&nbsp;&nbsp;Headlight Polish
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Spot Polish" value="1000">&nbsp;&nbsp;Spot Polish
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="ep-3" value="1000">&nbsp;&nbsp;Spot Polish
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Customize" value="300">&nbsp;&nbsp;Customize
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="ep-4" value="300">&nbsp;&nbsp;Customize
 					    	</div><br>
 					      </div>
 					      <div class="modal-footer">
@@ -119,16 +119,16 @@
 					      </div>
 					      <div class="modal-body">
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Full Exterior Polish" value="4000">&nbsp;&nbsp;Full Exterior Polish
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="fd-1" value="4000">&nbsp;&nbsp;Full Exterior Polish
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Full Interior Cleaning" value="3100">&nbsp;&nbsp;Full Interior Cleaning
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="fd-2" value="3100">&nbsp;&nbsp;Full Interior Cleaning
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Engine Bay Cleaning" value="1200">&nbsp;&nbsp;Engine Bay Cleaning
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="fd-3" value="1200">&nbsp;&nbsp;Engine Bay Cleaning
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Wheel Rim Cleaning" value="1000">&nbsp;&nbsp;Wheel Rim Cleaning
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="fd-4" value="1000">&nbsp;&nbsp;Wheel Rim Cleaning
 					    	</div><br>
 					      </div>
 					      <div class="modal-footer">
@@ -157,13 +157,13 @@
 					      </div>
 					      <div class="modal-body">
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Ceramic Coating on Car" value="3200">&nbsp;&nbsp;Ceramic Coating on Car
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="cc-1" value="3200">&nbsp;&nbsp;Ceramic Coating on Car
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Ceramic Coating on Motorbike" value="1250">&nbsp;&nbsp;Ceramic Coating on Motorbike
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="cc-2" value="1250">&nbsp;&nbsp;Ceramic Coating on Motorbike
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Customize" value="2000">&nbsp;&nbsp;Customize
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="cc-3" value="2000">&nbsp;&nbsp;Customize
 					      	</div><br>
 					      </div>
 					      <div class="modal-footer">
@@ -192,10 +192,10 @@
 					      </div>
 					      <div class="modal-body">
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Hydrographic Printing" value="3000">&nbsp;&nbsp;Hydrographic Printing
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="hp-1" value="3000">&nbsp;&nbsp;Hydrographic Printing
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Customize" value="1200">&nbsp;&nbsp;Customize
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="hp-2" value="1200">&nbsp;&nbsp;Customize
 					      	</div><br>
 					      </div>
 					      <div class="modal-footer">
@@ -232,13 +232,13 @@
 					      </div>
 					      <div class="modal-body">
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Painting of Wheel" value="1500">&nbsp;&nbsp;Painting of Wheel
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="wrp-1" value="1500">&nbsp;&nbsp;Painting of Wheel
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Colour Name" value="1700">&nbsp;&nbsp;Colour Name
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="wrp-2" value="1700">&nbsp;&nbsp;Colour Name
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Customize" value="2000">&nbsp;&nbsp;Customize
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="wrp-3" value="2000">&nbsp;&nbsp;Customize
 					      	</div><br>
 					      </div>
 					      <div class="modal-footer">
@@ -248,7 +248,7 @@
 					  </div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-4 tdow-modals">
+<!-- 				<div class="col-md-3 col-sm-4 tdow-modals">
 					<center>
 						<button type="button" class="btn btn-lg btn-dark tdow-buttons" data-toggle="modal" data-target="#exampleModalCenter6">
 						  Chrome Painting
@@ -256,7 +256,7 @@
 					</center>
 
 					<!-- Modal 6-->
-					<div class="modal fade" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- 					<div class="modal fade" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 					  <div class="modal-dialog modal-dialog-centered" role="document">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -283,7 +283,7 @@
 					  </div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-4 tdow-modals">
+ --> 				<div class="col-md-3 col-sm-4 tdow-modals">
 					<center>
 						<button type="button" class="btn btn-lg btn-dark tdow-buttons" data-toggle="modal" data-target="#exampleModalCenter7">
 						  Painting Jobs
@@ -302,16 +302,16 @@
 					      </div>
 					      <div class="modal-body">
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Exterior Polish" value="1200">&nbsp;&nbsp;Exterior Polish
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="pj-1" value="1200">&nbsp;&nbsp;Exterior Polish
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Headlight Polish" value="1200">&nbsp;&nbsp;Headlight Polish
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="pj-2" value="1200">&nbsp;&nbsp;Headlight Polish
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Spot Polish" value="1400">&nbsp;&nbsp;Spot Polish
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="pj-3" value="1400">&nbsp;&nbsp;Spot Polish
 					      	</div><br>
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Customize" value="3000">&nbsp;&nbsp;Customize
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="pj-4" value="3000">&nbsp;&nbsp;Customize
 					    	</div><br>
 					      </div>
 					      <div class="modal-footer">
@@ -380,7 +380,7 @@
 					      </div>
 					      <div class="modal-body">
 					      	<div class="tdow-check">
-					      	<input type="checkbox" aria-label="Checkbox for following label" name="Customize" value="1200">&nbsp;&nbsp;Customize
+					      	<input type="checkbox" aria-label="Checkbox for following label" name="mr-1" value="1200">&nbsp;&nbsp;Customize
 					    	</div><br>
 					      </div>
 					      <div class="modal-footer">

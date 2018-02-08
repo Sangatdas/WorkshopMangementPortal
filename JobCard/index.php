@@ -36,6 +36,50 @@
  	# code...
  	$_SESSION['vehicle'] = "";
  }
+	$keys = array_keys($_POST);
+	$ep = 0;
+	$fd = 0;
+	$cc = 0;
+	$hp = 0;
+	$wrp = 0;
+	$pj = 0;
+	$mr = 0;
+	if (isset($keys)) {
+		# code...
+		foreach ($keys as $k) {
+			# code...
+			$bc = explode("-", $k);
+			if ($bc[0] == "ep") {
+				# code...
+				$ep += $_POST[$k];
+			}
+			elseif ($bc[0] == "fd") {
+				# code...
+				$fd += $_POST[$k];
+			}
+			elseif ($bc[0] == "cc") {
+				# code...
+				$cc += $_POST[$k];
+			}
+			elseif ($bc[0] == "hp") {
+				# code...
+				$hp += $_POST[$k];
+			}
+			elseif ($bc[0] == "wrp") {
+				# code...
+				$wrp += $_POST[$k];
+			}
+			elseif ($bc[0] == "pj") {
+				# code...
+				$pj += $_POST[$k];
+			}
+			elseif ($bc[0] == "mr") {
+				# code...
+				$mr += $_POST[$k];
+			}
+		}
+	}
+	$services = array('Exterior Polishing' => $ep, 'Full Detailing' => $fd, 'Ceramic Coating' => $cc, 'Hydrographic Printing' => $hp, 'Wheel Rim Painting' => $wrp, 'Painting Jobs' => $pj, 'Mechanic Repairs' => $mr);
 
 ?>
 <!DOCTYPE Html>
@@ -86,7 +130,7 @@
 			<div id="date" class="col-md-4 col-sm-6"></div>
 				<div id="location" class="col-md-4 col-sm-6">
 				<center>
-					<select>
+					<select id="branch" name="branch">
 						<option>Select Location</option>
 						<option>A</option>
 						<option>B</option>
@@ -113,23 +157,23 @@
 						<table>
 							<tr>
 								<td><label for="customer-name">Customer Name:&nbsp;</label></td>
-								<td><div><?php echo $_SESSION["customer-name"];?></div></td>
+								<td><div id="cust-name"><?php echo $_SESSION["customer-name"];?></div></td>
 							</tr>
 							<tr>
 								<td><label for="customer-address">Customer Address:&nbsp;</label></td>
-								<td><div><?php echo $_SESSION["customer-address"];?></div></td>
+								<td><div id="cust-addr"><?php echo $_SESSION["customer-address"];?></div></td>
 							</tr>
 							<tr>
 								<td><label for="customer-ph-1">Mobile Number 1:&nbsp;</label></td>
-								<td><div><?php echo $_SESSION["customer-ph-1"];?></div></td>
+								<td><div id="cust-ph-1"><?php echo $_SESSION["customer-ph-1"];?></div></td>
 							</tr>
 							<tr>
 								<td><label for="customer-ph-2">Mobile Number 2:&nbsp;</label></td>
-								<td><div><?php echo $_SESSION["customer-ph-2"];?></div></td>
+								<td><div id="cust-ph-2"><?php echo $_SESSION["customer-ph-2"];?></div></td>
 							</tr>
 							<tr>
 								<td><label for="customer-email">Email Address:&nbsp;</label></td>
-								<td><div><?php echo $_SESSION["customer-email"];?></div></td>
+								<td><div id="cust-email"><?php echo $_SESSION["customer-email"];?></div></td>
 							</tr>
 						</table>
 					</center>
@@ -149,19 +193,19 @@
 							<table>
 								<tr>
 									<td><label for="reg-no">Registration No. :&nbsp;</label></td>
-									<td><div><?php echo $_SESSION["reg-no"];?></div></td>
+									<td><div id="reg-no"><?php echo $_SESSION["reg-no"];?></div></td>
 								</tr>
 								<tr>
 									<td><label for="chassis-no">Chassis No. :&nbsp;</label></td>
-									<td><div><?php echo $_SESSION["chassis-no"];?></div></td>
+									<td><div id="chassis-no"><?php echo $_SESSION["chassis-no"];?></div></td>
 								</tr>
 								<tr>
 									<td><label for="model-no">Model No. :&nbsp;</label></td>
-									<td><div><?php echo $_SESSION["model-no"];?></div></td>
+									<td><div id="model-no"><?php echo $_SESSION["model-no"];?></div></td>
 								</tr>
 								<tr>
 									<td><label for="vehicle">Vehicle Type:&nbsp;</label></td>
-									<td><div><?php echo $_SESSION["vehicle"];?></div></td>
+									<td><div id="vehicle"><?php echo $_SESSION["vehicle"];?></div></td>
 								</tr>
 									
 							</table>
@@ -179,7 +223,7 @@
 		<div class="row" style="margin-right:0;">
 			<div class="col-md-12 col-sm-12">
 				<center>
-					<input type="button" class="btn-dark" value="Go to Services" style="width:200px;font-weight:bold;" onclick="openInNewTab('../Services/')">
+					<input id="services" type="button" class="btn-dark" value="Go to Services" style="width:200px;font-weight:bold;cursor:pointer;" onclick="openInNewTab('../Services/')">
 				</center>
 			</div>
 		</div>
@@ -195,22 +239,34 @@
 			<center>
 				<table>
 					<tr>
+						<th>Sr No.</th>
 						<th>Customer Requirements</th>
 						<th>Amount</th>
 					</tr>
 					<?php 
+						$i = 1;
 						$tot_amt = 0;
-						foreach ($_POST as $service => $value) {
+						foreach ($services as $s => $value) {
 							# code...
-							echo "<tr><td>".$service."</td><td>".$value."</td></tr>";
-							$tot_amt = $tot_amt + $value;
+							if ($value != 0) {
+								# code...
+								echo "<tr>
+									<td>".$i."</td>
+									<td>".$s."</td>
+									<td class='val'>".$value."</td>
+								</tr>";
+								$tot_amt += $value;
+								$i++;
+							}
 						}
+						echo "<tr>
+							<td></td>
+							<td><strong>Total Amount</strong></td>
+							<td class='val' id='tot_amt'><strong>".$tot_amt."</strong></td>
+						</tr>";
 					?>
-					<tr>
-						<th>Total Amount:</th>
-						<th><?php echo $tot_amt; ?></th>
-					</tr>
 				</table>
+					
 			</center>
 			</div>
 		</div>
@@ -220,7 +276,9 @@
 		<br><br>
 
 		<center>
-			<input type="submit" class="btn-dark" id="print" value="Save" style="width:200px;font-weight:bold;cursor:pointer;">
+			<input type="button" class="btn-dark" id="printToAccounts" value="Print to Accounts" style="width:200px;font-weight:bold;cursor:pointer;">
+			<input type="button" class="btn-dark" id="printToWorkshop" value="Print to Workshop" style="width:200px;font-weight:bold;cursor:pointer;">
+			<input type="button" class="btn-dark" id="printToAdmin" value="Save" style="width:200px;font-weight:bold;cursor:pointer;">
 		</center>
 		
 		</form>
@@ -233,7 +291,7 @@
 <!-- Javascript -->
 		<!-- CDNs -->
 
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		
@@ -262,9 +320,58 @@
 		</script>
 		<script type="text/javascript">
 
-			$("#print").click(function(event){
+			$("#printToAccounts").click(function(event){
 
+				$("#services").hide();
+				$("#printToAccounts").hide();
+				$("#printToWorkshop").hide();
+				$("#printToAdmin").hide();
 				window.print();
+				$("#services").show();
+				$("#printToAccounts").show();
+				$("#printToWorkshop").show();
+				$("#printToAdmin").show();
+			});
+
+		</script>
+		<script type="text/javascript">
+
+			$("#printToWorkshop").click(function(event){
+
+				$("#services").hide();
+				$("#printToAccounts").hide();
+				$("#printToWorkshop").hide();
+				$("#printToAdmin").hide();
+				$(".val").hide();
+				window.print();
+				$("#services").show();
+				$("#printToAccounts").show();
+				$("#printToWorkshop").show();
+				$("#printToAdmin").show();
+			});
+
+		</script>
+		<script type="text/javascript">
+
+			$("#printToAdmin").click(function(event){
+
+				$.post("../PHP-APIS/save.php",{
+					dt: $("#date center").html(),
+					bc: $("#branch").val(),
+					jc: $("#jc-no center").html(),
+					cn: $("#cust-name").html(),
+					ca: $("#cust-addr").html(),
+					cp1: $("#cust-ph-1").html(),
+					cp2: $("#cust-ph-2").html(),
+					ce: $("#cust-email").html(),
+					rno: $("#reg-no").html(),
+					cno: $("#chassis-no").html(),
+					mno: $("#model-no").html(),
+					v: $("#cust-addr").html(),
+					ta: <?php echo "".$tot_amt; ?>
+				},function(data, status){
+					alert(data);
+				});
 			})
 
 		</script>
