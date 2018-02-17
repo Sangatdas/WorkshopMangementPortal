@@ -12,12 +12,14 @@
 		<link rel="stylesheet" type="text/css" href="../assets/css/header.css">
 		<link rel="stylesheet" type="text/css" href="../assets/css/inputs.css">
 		<link rel="stylesheet" type="text/css" href="../assets/css/tables.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/menu.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<!-- End External Stylesheets -->
 
 		<!-- CDNs -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 		<!-- End CDNs -->
 
@@ -40,59 +42,88 @@
 	</head>
 	<body>
 <!-- Main -->	
-
-	<!-- Navbar -->
-		<div id="tdow-navbar">
-			<img src="../assets/images/logo.jpg" id="tdow-logo">
-			<center>
-				<div id="company-name">
-					The Deals On Wheels<br>
-					<span>Sales Report</span>
+	<div class="row" style="margin-right:0;">
+		<div class="col-md-2" style="margin:0;padding:0;">
+			<div id="menu">
+				<div style="margin-top:0;">Menu</div>
+				<div><i class="fas fa-plus"></i> Add New Customer</div>
+				<div><i class="fas fa-search"></i> Find Existing Customer</div>
+				<div><i class="fa fa-id-card"></i> Create New JobCard</div>
+				<div><i class="fa fa-money-bill-alt"></i> Accounts</div>
+				<div><i class="fa fa-user"></i> HR</div>
+				<div><i class="fa fa-shopping-cart"></i> Purchase</div>
+				<div><i class="fab fa-wpforms"></i> Forms</div>
+				<div><i class="fas fa-tasks"></i> Workflow Status</div>
+				<div><i class="fa fa-chart-line"></i> Sales Report</div>
+				<div><i class="fas fa-chart-bar"></i> Purchase Report</div>
+				<div><i class="fab fa-amazon-pay"></i> Payables</div>
+				<div><i class="fas fa-chart-area"></i> Stock</div>
+				<div><i class="far fa-money-bill-alt"></i> Receivables</div>
+				<div><i class="fas fa-balance-scale"></i> Sales Vs Actual</div>
+				<div><i class="fas fa-cogs"></i> Workshop Productivity</div>
+			</div>
+		</div>
+		<div class="col-md-10" style="margin:0;padding:0;">
+			<!-- Navbar -->
+				<div id="tdow-navbar">
+					<center>
+						<div id="company-name">
+							<img src="../assets/images/logo.jpg" id="tdow-logo">
+							The Deals On Wheels<br>
+							<!-- <span>Login</span> -->
+						</div>
+					</center>
 				</div>
-			</center>
-		</div>
-	<!-- End Navbar -->
-		<br><br><br><br>
-		<!-- Subnav -->
-		<div class="row" style="margin-right:0;">
-			<div class="col-md-4 col-sm-12" id="date-picker">
-				<center>
-	            	<p>Select Date:&nbsp; <input type="text" id="datepicker"></p>
-	            </center>
-			</div>
-			<div class="col-md-4 col-sm-12" id="radio-options">
-				<center>
-					<label><h3><b>Select View</b></h3></label><br>
-					<input type="radio" name="view" id="day" value="day">
-					<label for="day">By date</label>
-					<input type="radio" name="view" id="month" value="month">
-					<label for="day">By month</label>
-					<input type="radio" name="view" id="year" value="year">
-					<label for="day">By year</label>
-				</center>
-			</div>
-			<div class="col-md-4 col-sm-12" id="view-changing-button">
-				<center>
-					<button type="button" class="btn btn-lg btn-dark tdow-buttons" id="change-view">
-					  Change View
-					</button>
-				</center>
-			</div>
-		</div>
-		<!-- End Subnav -->
+			<!-- End Navbar -->
 
-	<!-- Start Table -->
-		<br><br>
-		<center>
-			<div id="report-tables">
-			</div>
 
-			<div class="chart-container col-md-6 col-sm-12" style="position:relative;">
-				<canvas id="myChart"></canvas>
+			<!-- Start Form -->
+				<br><br><br><br>
+				<!-- Subnav -->
+				<div class="row" style="margin-right:0;">
+					<div class="col-md-4 col-sm-12" id="date-picker">
+						<center>
+			            	<p>Select Date:&nbsp; <input type="text" id="datepicker"></p>
+			            </center>
+					</div>
+					<div class="col-md-4 col-sm-12" id="radio-options">
+						<center>
+							<label><h3><b>Select View</b></h3></label><br>
+							<input type="radio" name="view" id="day" value="day">
+							<label for="day">By date</label>
+							<input type="radio" name="view" id="month" value="month">
+							<label for="day">By month</label>
+							<input type="radio" name="view" id="year" value="year">
+							<label for="day">By year</label>
+						</center>
+					</div>
+					<div class="col-md-4 col-sm-12" id="view-changing-button">
+						<center>
+							<button type="button" class="btn btn-lg btn-dark tdow-buttons" id="change-view">
+							  Change View
+							</button>
+						</center>
+					</div>
+				</div>
+				<!-- End Subnav -->
+
+			<!-- Start Table -->
+				<br><br>
+				<center>
+					<div id="report-tables">
+					</div>
+
+					<div class="chart-container col-md-6 col-sm-12" style="position:relative;">
+						<canvas id="myChart"></canvas>
+					</div>
+				</center>
+			
+			<!-- End Table -->
+
+			<!-- system dashboard -->
 			</div>
-		</center>
-	
-	<!-- End Table -->
+		</div>
+
 
 <!-- End Main -->
 

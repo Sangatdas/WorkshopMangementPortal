@@ -1,0 +1,6 @@
+@media print{
+	body{
+		position: absolute;
+		top: -50px;
+	}
+}

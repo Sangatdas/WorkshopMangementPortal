@@ -1,0 +1,35 @@
+@import url("header.css");
+
+#menu{
+	background-color: #EEE;
+	margin: 0;
+	height: 100vh;
+	position: fixed;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+}
+#menu div{
+	margin: 10px 0 10px 20px;
+	font-weight: bold;
+	padding: 15px;
+	width: 100%;
+	transition: all 0.3s ease-out;
+}
+#menu div:hover{
+	color: rgb(0,105,217);
+}
+#menu div:nth-of-type(1){
+	font-size: 150%;
+	font-family: AmericanCaptain,serif;
+	text-decoration: underline;
+}
+#menu div:nth-of-type(1):hover{
+	color: black;
+}
+#menu a{
+	color: black;
+}
+#menu a:hover{
+	text-decoration: none;
+	color: rgb(0,105,217);
+}

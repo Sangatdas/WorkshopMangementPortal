@@ -1,11 +1,11 @@
 #tdow-subnav{
-	background-color: #CCC; 
-	color: white;
+	/*background-color: #CCC; */
+	color: black;
 	font-weight: bold;
 	font-size: 150%;
 }
 #tdow-subnav div{
-	margin: 35px 0 35px 0;
+	margin: 35px 0 35px 10px;
 }
 #date{
 }

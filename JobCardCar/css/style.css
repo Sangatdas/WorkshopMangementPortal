@@ -1,0 +1,65 @@
+#tdow-subnav{
+	/*background-color: #CCC; */
+	color: black;
+	font-weight: bold;
+	font-size: 150%;
+}
+#tdow-subnav div{
+	margin: 35px 0 35px 10px;
+}
+#date{
+}
+#location{
+	padding-left: 80px;
+}
+#jc-no{
+}
+.division{
+	border-right: 1px solid #555;
+}
+input[type="radio"]{
+	margin-left: 20px; 
+}
+p{
+	text-align: center;
+}
+td{
+	padding: 10px;
+}
+textarea{
+	resize: none;
+	border-radius:3px;
+	padding: 10px;
+}
+input{
+	border-radius: 3px;
+	padding: 10px;
+}
+input, textarea{
+	background-color: white;
+	color: black;
+	border: solid 1px black;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+input:focus, textarea:focus{
+	box-shadow: 2px 2px 3px #333;
+}
+
+.billing table{
+	width: 70%;
+	padding: 15px;
+}
+.billing tr{
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	padding: 15px;
+	text-align: center;
+}
+.billing tr td,.billing tr th{
+	padding: 15px;
+	border-right: 1px solid #888;
+}

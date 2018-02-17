@@ -33,11 +33,11 @@
 
 	<!-- Navbar -->
 		<div id="tdow-navbar">
-			<img src="../assets/images/logo.jpg" id="tdow-logo">
 			<center>
 				<div id="company-name">
+					<img src="../assets/images/logo.jpg" id="tdow-logo">
 					The Deals On Wheels<br>
-					<span>WorkFlow</span>
+					<!-- <span>Login</span> -->
 				</div>
 			</center>
 		</div>

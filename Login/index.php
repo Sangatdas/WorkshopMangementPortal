@@ -26,11 +26,11 @@
 
 	<!-- Navbar -->
 		<div id="tdow-navbar">
-			<img src="../assets/images/logo.jpg" id="tdow-logo">
 			<center>
 				<div id="company-name">
+					<img src="../assets/images/logo.jpg" id="tdow-logo">
 					The Deals On Wheels<br>
-					<span>Login</span>
+					<!-- <span>Login</span> -->
 				</div>
 			</center>
 		</div>
@@ -56,11 +56,11 @@
                             <tr>
                                 <td colspan = "2">
                                 <center>
-                                        <input type="radio" name="loginAt" value="Admin">
+                                        <input type="radio" name="loginAt" value="Admin" required>
                                         <label for = "admin"><b>Admin </b></label>
-                                        <input type= "radio" name="loginAt" value="Manager">
+                                        <input type= "radio" name="loginAt" value="Manager" required>
                                         <label for = "manager"> <b>Manager</b></label>
-                                        <input type="radio" name="loginAt" value="Accounts">
+                                        <input type="radio" name="loginAt" value="Accounts" required>
                                         <label for = "accounts"><b> Accounts</b></label>
                                 </center>
                                     
@@ -74,14 +74,14 @@
                                     <label for = "username">Username:&nbsp;</label>
                                 </td>
                                 <td>
-                                    <input id="username" type = "text" name="username">
+                                    <input id="username" type = "text" name="username" required>
                                 </td>
                             </tr>
                         
 							<tr>
 								<td><label for="password">Password:&nbsp;</label></td>
 								<td> 
-                                    <input id="password" type = "password" name="password">
+                                    <input id="password" type = "password" name="password" required>
                                 </td>
 							</tr>
                             
@@ -90,7 +90,7 @@
 						</table>
                         <center>
                             <br>
-                            <input type="button" id="cancel" class="btn-danger" value="cancel" style="width:100px;font-weight:bold;">&nbsp;
+                            <input type="reset" id="reset" class="btn-danger" value="Reset" style="width:100px;font-weight:bold;">&nbsp;
                             <input type="button" id="login" class="btn-dark" value="Login" style="width:100px;font-weight:bold;">
                             <br><br>
                             <a href ="">Forgot Password?</a>
