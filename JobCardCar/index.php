@@ -107,7 +107,7 @@
 		<div class="col-md-2" style="margin:0;padding:0;">
 			<div id="menu">
 				<div style="margin-top:0;">Menu</div>
-				<div><a href="../Find/"><i class="fas fa-search"></i> Find Existing Customer</a></div>
+				<div><a href="../Home/"><i class="fas fa-home"></i> Home</a></div>
 				<div><a href="../Customer-Data/"><i class="fa fa-id-card"></i> Create New JobCard</a></div>
 				<div><a href="../Accounts/"><i class="fa fa-money-bill-alt"></i> Accounts</a></div>
 				<div><a href="../HR/"><i class="fa fa-user"></i> HR</a></div>

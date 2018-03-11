@@ -2,12 +2,17 @@
 <?php
 session_start();
 
-
-$sql = "SELECT id FROM JobCard";
+$sql = "SELECT JCNo FROM JobCard ORDER BY id DESC LIMIT 1";
 
 $result = $conn->query($sql);
 
-$nr = mysqli_num_rows($result);
+$tup = $result->fetch_assoc();
+
+$jc = $tup["JCNo"];
+
+preg_match_all('!\d+!', $jc, $matches);
+
+$nr = $matches[0][0] + 1;
 
 $_SESSION["jc-no"] = $_POST["location"].$nr;
 

@@ -32,7 +32,7 @@
 		<div class="col-md-2" style="margin:0;padding:0;">
 			<div id="menu">
 				<div style="margin-top:0;">Menu</div>
-				<div><a href="../Find/"><i class="fas fa-search"></i> Find Existing Customer</a></div>
+				<div><a href="../Home/"><i class="fas fa-home"></i> Home</a></div>
 				<div><a href="../Customer-Data/"><i class="fa fa-id-card"></i> Create New JobCard</a></div>
 				<div><a href="../Accounts/"><i class="fa fa-money-bill-alt"></i> Accounts</a></div>
 				<div><a href="../HR/"><i class="fa fa-user"></i> HR</a></div>
@@ -91,7 +91,7 @@
 									</tr>
 									<tr>
 										<td><label for="customer-fname">First Name:&nbsp;</label></td>
-										<td><input type="text" name="customer-fname" placeholder="First Name"></td>
+										<td><input type="text" name="customer-fname" placeholder="First Name" required></td>
 									</tr>
 									<tr>
 									<tr>
@@ -100,7 +100,7 @@
 									</tr>
 									<tr>
 										<td><label for="customer-lname">Last Name:&nbsp;</label></td>
-										<td><input type="text" name="customer-lname" placeholder="Last Name"></td>
+										<td><input type="text" name="customer-lname" placeholder="Last Name" required></td>
 									</tr>
 									<tr>
 										<td><label for="customer-address">Customer Address:&nbsp;</label></td>
@@ -108,15 +108,15 @@
 									</tr>
 									<tr>
 										<td><label for="customer-ph-1">Mobile Number 1:&nbsp;</label></td>
-										<td><input type="text" name="customer-ph-1" placeholder="Mobile Number"></td>
+										<td><input type="text" name="customer-ph-1" placeholder="Mobile Number" required maxlength="12" minlength="10"></td>
 									</tr>
 									<tr>
 										<td><label for="customer-ph-2">Mobile Number 2:&nbsp;</label></td>
-										<td><input type="text" name="customer-ph-2" placeholder="Mobile Number"></td>
+										<td><input type="text" name="customer-ph-2" placeholder="Mobile Number" minlength="10" maxlength="12"></td>
 									</tr>
 									<tr>
 										<td><label for="customer-email">Email Address:&nbsp;</label></td>
-										<td><input type="email" name="customer-email" placeholder="Customer Email"></td>
+										<td><input type="email" name="customer-email" placeholder="Customer Email" required></td>
 									</tr>
 								</table>
 							</center>
@@ -136,7 +136,7 @@
 									<table>
 										<tr>
 											<td><label for="reg-no">Registration No. :&nbsp;</label></td>
-											<td><input type="text" name="reg-no" placeholder="Registration No."></td>
+											<td><input type="text" name="reg-no" placeholder="Registration No." required style="text-transform:uppercase;"></td>
 										</tr>
 										<tr>
 											<td><label for="chassis-no">Chassis No. :&nbsp;</label></td>
@@ -149,8 +149,8 @@
 										<tr>
 											<td><label for="vehicle">Vehicle Type:&nbsp;</label></td>
 											<td>
-												<input type="radio" name="vehicle" value="Car">&nbsp;Car
-												<input type="radio" name="vehicle" value="Bike">&nbsp;Bike
+												<input type="radio" name="vehicle" value="Car" required>&nbsp;Car
+												<input type="radio" name="vehicle" value="Bike" required>&nbsp;Bike
 											</td>
 										</tr>
 										<tr>
@@ -174,7 +174,8 @@
 				<!-- End Vehicle Details -->
 
 				<center>
-					<input type="submit" class="btn-dark" value="Save" style="width:200px;font-weight:bold;" formaction="../PHP-APIS/reg-customer.php">
+					<input type="submit" class="btn-dark" value="Save" style="width:200px;font-weight:bold;cursor:pointer;" formaction="../PHP-APIS/reg-customer.php">
+					<input type="reset" class="btn-primary" value="Reset" style="width:200px;font-weight:bold;cursor:pointer;">	
 				</center>
 				
 				</form>

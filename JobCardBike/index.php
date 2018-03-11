@@ -107,8 +107,8 @@
 		<div class="col-md-2" style="margin:0;padding:0;">
 			<div id="menu">
 				<div style="margin-top:0;">Menu</div>
-				<div><a href="../Find/"><i class="fas fa-search"></i> Find Existing Customer</a></div>
-				<div><a href="../Customer-Data/"><i class="fa fa-id-card"></i> Create New JobCard</a></div>
+				<div><a href="../Home/"><i class="fas fa-home"></i> Home</a></div>
+				<div><a href="../Customer-Data/"><i class="fa fa-id-card"></i> New JobCard</a></div>
 				<div><a href="../Accounts/"><i class="fa fa-money-bill-alt"></i> Accounts</a></div>
 				<div><a href="../HR/"><i class="fa fa-user"></i> HR</a></div>
 				<div><a href="../Purchase/"><i class="fa fa-shopping-cart"></i> Purchase</a></div>
@@ -252,15 +252,15 @@
 					      <div class="modal-body">
 					      	<div class="tdow-check">
 					      	<input type="checkbox" aria-label="Checkbox for following label">&nbsp;&nbsp;Exterior Polish
-					      	<input type="number" aria-label="Checkbox for following label" name="fd-FullExteriorPolish" value="0">
+					      	<input type="number" aria-label="Checkbox for following label" name="ep-FullExteriorPolish" value="0">
 					      	</div><br>
 					      	<div class="tdow-check">
 					      	<input type="checkbox" aria-label="Checkbox for following label">&nbsp;&nbsp;Spot Polish
-					      	<input type="number" aria-label="Checkbox for following label" name="fd-EngineBayCleaning" value="0">
+					      	<input type="number" aria-label="Checkbox for following label" name="ep-EngineBayCleaning" value="0">
 					      	</div><br>
 					      	<div class="tdow-check">
 					      	<input type="checkbox" aria-label="Checkbox for following label">&nbsp;&nbsp;Customize
-					      	<input type="number" aria-label="Checkbox for following label" name="fd-WheelRimCleaning" value="0">
+					      	<input type="number" aria-label="Checkbox for following label" name="ep-WheelRimCleaning" value="0">
 					    	</div><br>
 					      </div>
 					      <div class="modal-footer">

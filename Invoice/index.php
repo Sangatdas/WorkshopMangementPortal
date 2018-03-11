@@ -341,7 +341,7 @@
 		</center>
 		</div>
 		<div class="col-md-6 col-sm-6">
-			<img src= <?php echo "".$imgsrc; ?> width="500" height="350">
+			<center><img src= <?php echo "".$imgsrc; ?> width="400" height="350">
 		</div>
 	</div><br>
 	<div class="row" style="margin-right:0;">
@@ -507,9 +507,8 @@
 				$("#printToAccounts").hide();
 				$("#printToWorkshop").hide();
 				$("#printToAdmin").hide();
-				$(".val").hide();
+				$(".val").html("XXXX");
 				window.print();
-				$(".val").show();
 				$("#services").show();
 				$("#printToAccounts").show();
 				$("#printToWorkshop").show();

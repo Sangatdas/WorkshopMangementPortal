@@ -29,24 +29,49 @@
 	$flag1 = false;
 	$flag2 = false;
 	$flag3 = false;
-	$sql = "INSERT INTO Customer (id, Name, Address, Mob1, Mob2, Email)
-	VALUES (null, '".mysqli_real_escape_string($conn, $cn)."', '".mysqli_real_escape_string($conn, $ca)."', '".mysqli_real_escape_string($conn, $cp1)."', '".mysqli_real_escape_string($conn, $cp2)."', '".mysqli_real_escape_string($conn, $ce)."')";
 
-	if ($conn->query($sql) === TRUE) {
-	    $cust_last_id = $conn->insert_id;
-	    $flag1 = true;
-	} else {
-	    $flag1 = false;
+	$q = "SELECT * FROM Customer WHERE Name = '".mysqli_real_escape_string($conn, $cn)."'";
+	$rs = $conn->query($q);
+	$rows = mysqli_num_rows($rs);
+	if ($rows > 0) {
+		# code...
+		$flag1 = true;
+		$id = $rs->fetch_assoc();
+		$cust_last_id = $id["id"];
 	}
-	$sql = "INSERT INTO Vehicle (id, RegistrationNo, ChassisNo, ModelNo, Type, customerid)
-	VALUES (null, '".mysqli_real_escape_string($conn, $rno)."', '".mysqli_real_escape_string($conn, $cno)."', '".mysqli_real_escape_string($conn, $mno)."', '".mysqli_real_escape_string($conn, $v)."', '".mysqli_real_escape_string($conn, $cust_last_id)."')";
+	else {
+		$sql = "INSERT INTO Customer (id, Name, Address, Mob1, Mob2, Email)
+		VALUES (null, '".mysqli_real_escape_string($conn, $cn)."', '".mysqli_real_escape_string($conn, $ca)."', '".mysqli_real_escape_string($conn, $cp1)."', '".mysqli_real_escape_string($conn, $cp2)."', '".mysqli_real_escape_string($conn, $ce)."')";
 
-	if ($conn->query($sql) === TRUE) {
-	    $vehicle_last_id = $conn->insert_id;
-	    $flag2 = true;
-	} else {
-	    $flag2 = false;
+		if ($conn->query($sql) === TRUE) {
+		    $cust_last_id = $conn->insert_id;
+		    $flag1 = true;
+		} else {
+		    $flag1 = false;
+		}
 	}
+
+	$q = "SELECT * FROM Vehicle WHERE RegistrationNo = '".mysqli_real_escape_string($conn, $rno)."'";
+	$rs = $conn->query($q);
+	$rows = mysqli_num_rows($rs);
+	if ($rows > 0) {
+		# code...
+		$flag2 = true;
+		$id = $rs->fetch_assoc();
+		$vehicle_last_id = $id["id"];
+	}
+	else {
+		$sql = "INSERT INTO Vehicle (id, RegistrationNo, ChassisNo, ModelNo, Type, customerid)
+		VALUES (null, '".mysqli_real_escape_string($conn, $rno)."', '".mysqli_real_escape_string($conn, $cno)."', '".mysqli_real_escape_string($conn, $mno)."', '".mysqli_real_escape_string($conn, $v)."', '".mysqli_real_escape_string($conn, $cust_last_id)."')";
+
+		if ($conn->query($sql) === TRUE) {
+		    $vehicle_last_id = $conn->insert_id;
+		    $flag2 = true;
+		} else {
+		    $flag2 = false;
+		}
+	}
+	
 	$sql = "INSERT INTO JobCard (id, JCno, Branch, dt, vehicleno, customerno, EP, FD, CC, H, WRP, MR, PJ, Amount)
 	VALUES (null, '".mysqli_real_escape_string($conn, $jc)."', '".mysqli_real_escape_string($conn, $jc[0])."',
 	 '".mysqli_real_escape_string($conn, $dt)."', '".mysqli_real_escape_string($conn, $vehicle_last_id)."', 

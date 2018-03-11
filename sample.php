@@ -10,7 +10,7 @@
 
 	preg_match_all('!\d+!', $jc, $matches);
 
- 	$nr = $matches[0][0];
+ 	echo $matches[0][0];
 
-	echo $_POST["bc"].$nr;
+	// echo $_POST["bc"].$nr;
 ?>
